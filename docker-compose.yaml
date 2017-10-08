@@ -1,0 +1,11 @@
+version: '2'
+services:
+  hello-world-go:
+    image: hello-world-go:latest
+    container_name: hello-world-go
+    volumes:
+      - /var/log/services/hello-world-go/:/logs/
+    environment:
+      - environment=dev
+    ports:
+      - "8080:8080"
